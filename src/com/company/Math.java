@@ -15,28 +15,8 @@ public class Math {
         String userChoice ="y";
         Scanner scnr = new Scanner(System.in);
 
-        System.out.print("Enter length: ");
-        length = scnr.nextDouble();
 
-        System.out.print("Enter the width: ");
-        width = scnr.nextDouble();
-
-        System.out.print("Enter the height: ");
-        height =scnr.nextDouble();
-
-        area = (length * width);
-        System.out.println("The area is " + df.format(area) + " sqft.");
-
-        perimeter = 2 * (length + width);
-        System.out.println("The perimeter is " + df.format(perimeter) + " feet.");
-
-        volume =(length * width*height);
-        System.out.println("The volume is " + df.format(volume) + " cubic feet.");
-
-        System.out.println("Continue? Type (y/n)");
-        userChoice = scnr.next();
-
-        while (userChoice.equalsIgnoreCase("y")) { //Using while will continuously loop while user enters, "yes"
+         while (userChoice.equalsIgnoreCase("y")) { //Using while will continuously loop while user enters, "yes"
             System.out.print("Enter length: ");
             length = scnr.nextDouble();
 
@@ -52,7 +32,7 @@ public class Math {
             perimeter = 2 * (length + width);
             System.out.println("The perimeter is " + df.format(perimeter) + " feet");
 
-            volume =(length * width*height);
+            volume =(length * width* height);
             System.out.println("The volume is " + df.format(volume) + " cubic feet");
 
             System.out.println("Continue? Type (y/n)");
