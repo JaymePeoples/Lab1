@@ -12,51 +12,51 @@ public class Math {
         double perimeter = 0.0;
         double volume =0.0;
         DecimalFormat df = new DecimalFormat("#.00"); //Will limit to two spaces after the decimal point
-        String userWord = "yes"; //FIX: Need to allow to print either upper or lower case
+        String userChoice ="y";
         Scanner scnr = new Scanner(System.in);
 
-        System.out.println("Enter length of any room using the format feet.inches:");
+        System.out.print("Enter length: ");
         length = scnr.nextDouble();
 
-        System.out.println("Enter the width of the room using the format feet.inches:");
+        System.out.print("Enter the width: ");
         width = scnr.nextDouble();
 
-        System.out.println("Enter the height of the same room using the format feet.inches");
+        System.out.print("Enter the height: ");
         height =scnr.nextDouble();
 
         area = (length * width);
-        System.out.println("The area of the room is " + df.format(area) + " sqft.");
+        System.out.println("The area is " + df.format(area) + " sqft.");
 
         perimeter = 2 * (length + width);
-        System.out.println("The perimeter of the room is " + df.format(perimeter) + " feet.");
+        System.out.println("The perimeter is " + df.format(perimeter) + " feet.");
 
         volume =(length * width*height);
-        System.out.println("The volume of the room is " + df.format(volume) + " cubic feet.");
+        System.out.println("The volume is " + df.format(volume) + " cubic feet.");
 
-        System.out.println("Would you like to measure another room? Please type, yes or no");
-        userWord = scnr.next();
+        System.out.println("Continue? Type (y/n)");
+        userChoice = scnr.next();
 
-        while (userWord.equals("yes")) { //Using while will continuously loop while user enters, "yes"
-            System.out.println("Enter length of any room using the format feet.inches:");
+        while (userChoice.equalsIgnoreCase("y")) { //Using while will continuously loop while user enters, "yes"
+            System.out.print("Enter length: ");
             length = scnr.nextDouble();
 
-            System.out.println("Enter the width of any room using the format feet.inches:");
+            System.out.print("Enter the width: ");
             width = scnr.nextDouble();
 
-            System.out.println("Enter the height of the same room using the format feet.inches");
+            System.out.print("Enter the height: ");
             height =scnr.nextDouble();
 
             area = (length * width);
-            System.out.println("The area of the room is " + df.format(area) + " sqft");
+            System.out.println("The area is " + df.format(area) + " sqft");
 
             perimeter = 2 * (length + width);
-            System.out.println("The perimeter of the room is " + df.format(perimeter) + " feet");
+            System.out.println("The perimeter is " + df.format(perimeter) + " feet");
 
             volume =(length * width*height);
-            System.out.println("The volume of the room is " + df.format(volume) + " cubic feet");
+            System.out.println("The volume is " + df.format(volume) + " cubic feet");
 
-            System.out.println("Would you like to measure another room? Please type, yes or no");
-            userWord = scnr.next();
+            System.out.println("Continue? Type (y/n)");
+            userChoice = scnr.next();
 
         }
         System.out.println("Have a nice day.");//If user enters anything other than yes, will direct here.
